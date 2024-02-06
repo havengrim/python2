@@ -25,8 +25,8 @@ def user_login(request):
             login(request, user)
             messages.success(request, 'Login successful.')
             # Redirect to a success page or homepage
-            return redirect('home')  # Change 'home' to the name of your homepage URL pattern
+            return redirect('authentication/registration/login.html')  # Change 'home' to the name of your homepage URL pattern
         else:
             messages.error(request, 'Invalid login credentials. Please try again.')
 
-    return render(request, 'registration/login.html')
+    return render(request, 'authentication/login.html')
